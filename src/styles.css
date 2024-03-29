@@ -56,3 +56,15 @@ body {
 footer {
     margin-top: auto;
 }
+
+h1, h2 {
+    font-family: 'Comico';
+}
+
+.page-wrapper {
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

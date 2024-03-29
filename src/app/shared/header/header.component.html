@@ -1,11 +1,11 @@
 <header>
-    <div class="logo">
+    <div class="logo" [routerLink]="['/home']" routerLinkActive="router-link-active" >
         <span>Augustin</span>
         <span>JANVIER</span>
     </div>
     <div class="nav-item-bar">
-        <div class="nav-item" [routerLink]="['/home']" routerLinkActive="router-link-active">Qui suis-je ?</div>
-        <div class="nav-item" [routerLink]="['/home']" routerLinkActive="router-link-active">Mes projets</div>
-        <div class="nav-item" [routerLink]="['/home']" routerLinkActive="router-link-active">Me contacter</div>
+        <div class="nav-item" [routerLink]="['/about']" routerLinkActive="router-link-active">Qui suis-je ?</div>
+        <div class="nav-item" [routerLink]="['/portfolio']" routerLinkActive="router-link-active">Mes projets</div>
+        <div class="nav-item" [routerLink]="['/contact']" routerLinkActive="router-link-active">Me contacter</div>
     </div>
 </header>
