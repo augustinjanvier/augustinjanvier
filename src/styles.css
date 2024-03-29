@@ -1,3 +1,58 @@
+@font-face {
+    font-family: Roboto;
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(assets/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Comico;
+    src: 
+        url('assets/fonts/comico/Comico-Regular.woff2') format('woff2'),
+        url('assets/fonts/comico/Comico-Regular.woff') format('woff'),
+        url('assets/fonts/comico/Comico-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+:root {
+    --primary: #E6C229;
+    --secondary: #F17105;
+    --tertiary: #D11149;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.secondary {
+    color: var(--secondary);
+}
+
+.tertiary {
+    color: var(--tertiary);
+}
+
 body {
     margin: 0;
+    font-family: 'Nunito';
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
 }
