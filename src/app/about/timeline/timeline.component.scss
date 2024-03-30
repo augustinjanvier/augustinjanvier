@@ -32,10 +32,18 @@
     }
     
     .left, .right {
-        width: 90%;
-        h2 {
-            padding: 0 16px;
-            margin: 0;
+        width: 45%;
+        .title {
+            padding: 0 8px;
+            display: flex;
+            align-items: center;
+            h3 {
+                padding: 0 16px;
+                margin: 0;
+            }
+            img {
+                width: 30px;
+            }
         }
         .divider {
             height: 2px;
@@ -51,21 +59,9 @@
                 background-color: var(--tertiary);
             }
         }
+        p {
+            margin: 8px;
+        }
         
-    }
-
-    .left {
-        h2 {
-            text-align: right;
-        }
-        .divider {
-
-        }
-    }
-
-    .right {
-        h2 {
-            text-align: left;
-        }
     }
 }

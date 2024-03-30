@@ -37,6 +37,18 @@
     color: var(--tertiary);
 }
 
+.primary-filter {
+    filter: brightness(0) saturate(100%) invert(88%) sepia(64%) saturate(3139%) hue-rotate(332deg) brightness(94%) contrast(91%);
+}
+
+.secondary-filter {
+    filter: brightness(0) saturate(100%) invert(53%) sepia(55%) saturate(5646%) hue-rotate(9deg) brightness(105%) contrast(96%);
+}
+
+.tertiary-filter {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(53%) saturate(7487%) hue-rotate(335deg) brightness(84%) contrast(94%);
+}
+
 body {
     margin: 0;
     font-family: 'Nunito';
