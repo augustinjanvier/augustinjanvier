@@ -36,3 +36,38 @@ header {
         }
     }
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    width: 25px;
+}
+
+.screen {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.107);
+}
+.menu-item-bar {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    box-shadow: 10px 0 200px;
+    .menu-item {
+        padding: 8px;
+    }
+}

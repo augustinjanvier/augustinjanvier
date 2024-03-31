@@ -3,9 +3,24 @@
         <span>Augustin</span>
         <span>JANVIER</span>
     </nav>
-    <nav class="nav-item-bar">
-        <a class="nav-item" [routerLink]="['/about']" routerLinkActive="router-link-active">Qui suis-je ?</a>
-        <a class="nav-item" [routerLink]="['/portfolio']" routerLinkActive="router-link-active">Mes projets</a>
-        <a class="nav-item" [routerLink]="['/contact']" routerLinkActive="router-link-active">Me contacter</a>
-    </nav>
+    <ng-container *ngIf="!mobile; else mobileMenu">
+        <nav class="nav-item-bar">
+                <a class="nav-item" [routerLink]="['/about']" routerLinkActive="router-link-active">Qui suis-je ?</a>
+                <a class="nav-item" [routerLink]="['/portfolio']" routerLinkActive="router-link-active">Mes projets</a>
+                <a class="nav-item" [routerLink]="['/contact']" routerLinkActive="router-link-active">Me contacter</a>
+        </nav>
+    </ng-container>
+    <ng-template #mobileMenu>
+        <img (click)="menuOpen = !menuOpen" src="assets/icons/menu-dots.svg" alt="menu">
+    </ng-template>
+
+    <ng-container *ngIf="menuOpen">
+        <div class="screen" (click)="menuOpen = !menuOpen">
+        </div>
+        <nav class="menu-item-bar">
+            <a class="menu-item" [routerLink]="['/about']" routerLinkActive="router-link-active">Qui suis-je ?</a>
+            <a class="menu-item" [routerLink]="['/portfolio']" routerLinkActive="router-link-active">Mes projets</a>
+            <a class="menu-item" [routerLink]="['/contact']" routerLinkActive="router-link-active">Me contacter</a>
+        </nav>
+    </ng-container>
 </header>
