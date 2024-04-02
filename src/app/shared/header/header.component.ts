@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,10 @@ export class HeaderComponent implements OnInit {
 
   menuOpen: boolean = false;
 
-  constructor(private renderer: Renderer2) {
+  constructor(
+    private renderer: Renderer2,
+    public router: Router
+  ) {
     this.renderer.listen('window', 'click', (e: Event) => {
       if (e.target !== this.sideMenu.nativeElement) {
         this.menuOpen = false;
@@ -24,5 +28,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.mobile = window.screen.width < 600;
   }
-
 }

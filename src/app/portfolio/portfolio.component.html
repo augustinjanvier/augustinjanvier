@@ -2,9 +2,9 @@
     <h2>Portfolio</h2>
 
     <nav>
-        <a [routerLink]="['/portfolio/applications']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/').pop() === 'applications'">Applications</a>
-        <a [routerLink]="['/portfolio/video-games']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/').pop() === 'video-games'">Jeux vidéos</a>
-        <a [routerLink]="['/portfolio/divers']" routerLinkActive="router-link-active" [class.selected]="router.url.split('/').pop() === 'divers'">Autre</a>
+        <a [routerLink]="['applications']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/').pop() === 'applications'">Applications</a>
+        <a [routerLink]="['video-games']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/').pop() === 'video-games'">Jeux vidéos</a>
+        <a [routerLink]="['divers']" routerLinkActive="router-link-active" [class.selected]="router.url.split('/').pop() === 'divers'">Autre</a>
     </nav>
     
     <router-outlet></router-outlet>

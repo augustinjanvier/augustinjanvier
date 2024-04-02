@@ -20,11 +20,10 @@
         Couplé au framework Ionic, je peux, avec le même code, développer une application web, IOS et Android
     </p>
 
-    <nav>
-        <a [routerLink]="['/portfolio']" routerLinkActive="router-link-active">
-            <img class="secondary-filter" src="assets/icons/arrow-square-right.svg" alt="arrow">
-            <span class="secondary">Découvrir mes projets.</span>
-        </a>
-    </nav>
+    <app-go-to path="/about" text="Explorer mon parcours."></app-go-to>
+
+    <app-go-to path="/portfolio" text="Découvrir mes projets."></app-go-to>
+
+    <app-go-to path="/contact" text="Me contacter."></app-go-to>
 
 </div>

@@ -26,3 +26,7 @@ a {
     &:hover {
     filter: brightness(0) saturate(100%) invert(88%) sepia(64%) saturate(3139%) hue-rotate(332deg) brightness(94%) contrast(91%);    }
 }
+
+app-go-to {
+    padding: 8px;
+}

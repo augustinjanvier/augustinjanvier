@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,10 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class PortfolioComponent {
 
   constructor(
-    private titleService: Title,
     public router: Router,
     public activatedRoute: ActivatedRoute
   ) {
-    this.titleService.setTitle("Augustin Janvier - Mes projets");
   }
 }

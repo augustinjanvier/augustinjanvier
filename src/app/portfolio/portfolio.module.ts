@@ -6,6 +6,11 @@ import { PortfolioComponent } from './portfolio.component';
 import { VideoGamesComponent } from './video-games/video-games.component';
 import { ApplicationsComponent } from './applications/applications.component';
 import { DiversComponent } from './divers/divers.component';
+import { DuckBusinessComponent } from './video-games/duck-business/duck-business.component';
+import { SharedModule } from '../shared/shared.module';
+import { SpaceShooterComponent } from './video-games/space-shooter/space-shooter.component';
+import { TheLastJudgmentComponent } from './video-games/the-last-judgment/the-last-judgment.component';
+import { UpToHeavenComponent } from './video-games/up-to-heaven/up-to-heaven.component';
 
 
 @NgModule({
@@ -13,11 +18,16 @@ import { DiversComponent } from './divers/divers.component';
     PortfolioComponent,
     VideoGamesComponent,
     ApplicationsComponent,
-    DiversComponent
+    DiversComponent,
+    DuckBusinessComponent,
+    SpaceShooterComponent,
+    TheLastJudgmentComponent,
+    UpToHeavenComponent
   ],
   imports: [
     CommonModule,
-    PortfolioRoutingModule
+    PortfolioRoutingModule,
+    SharedModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

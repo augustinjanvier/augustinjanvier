@@ -4,19 +4,23 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomeModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+    title: 'Augustin Janvier'
   },
   {
     path: 'about',
-    loadChildren: () => import('./about/about.module').then( m => m.AboutModule)
+    loadChildren: () => import('./about/about.module').then( m => m.AboutModule),
+    title: 'Augustin Janvier - À propos'
   },
   {
     path: 'portfolio',
-    loadChildren: () => import('./portfolio/portfolio.module').then( m => m.PortfolioModule)
+    loadChildren: () => import('./portfolio/portfolio.module').then( m => m.PortfolioModule),
+    title: 'Augustin Janvier - Mes projets'
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactModule)
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactModule),
+    title: 'Augustin Janvier - Contact'
   },
   {
     path: '**',
@@ -26,7 +30,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+      scrollPositionRestoration: 'enabled'
+    })
   ],
   exports: [RouterModule]
 })
