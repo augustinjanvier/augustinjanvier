@@ -3,22 +3,9 @@
         <span>Augustin</span>
         <span>JANVIER</span>
     </nav>
-    <ng-container *ngIf="!mobile; else mobileMenu">
-        <nav class="nav-item-bar">
-                <a class="nav-item" [routerLink]="['about']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'about'">Qui suis-je ?</a>
-                <a class="nav-item" [routerLink]="['portfolio']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'portfolio'">Mes projets</a>
-                <a class="nav-item" [routerLink]="['contact']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'contact'">Me contacter</a>
-        </nav>
-    </ng-container>
-    <ng-template #mobileMenu>
-        <img (click)="menuOpen = !menuOpen" src="assets/icons/menu-dots.svg" alt="menu">
-    </ng-template>
-
-    <div #sideMenu *ngIf="menuOpen">
-        <nav class="menu-item-bar">
-            <a class="menu-item" [routerLink]="['about']" routerLinkActive="router-link-active">Qui suis-je ?</a>
-            <a class="menu-item" [routerLink]="['portfolio']" routerLinkActive="router-link-active">Mes projets</a>
-            <a class="menu-item" [routerLink]="['contact']" routerLinkActive="router-link-active">Me contacter</a>
-        </nav>
-    </div>
+    <nav class="nav-item-bar">
+            <a class="nav-item" [routerLink]="['about']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'about'">Qui suis-je ?</a>
+            <a class="nav-item" [routerLink]="['portfolio']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'portfolio'">Mes projets</a>
+            <a class="nav-item" [routerLink]="['contact']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'contact'">Me contacter</a>
+    </nav>
 </header>
