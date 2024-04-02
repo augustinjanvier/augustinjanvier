@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,8 +9,11 @@ import { Title } from '@angular/platform-browser';
 })
 export class PortfolioComponent {
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle("Augustin Janvier - Mes projets")
+  constructor(
+    private titleService: Title,
+    public router: Router,
+    public activatedRoute: ActivatedRoute
+  ) {
+    this.titleService.setTitle("Augustin Janvier - Mes projets");
   }
-
 }
