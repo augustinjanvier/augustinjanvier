@@ -1,6 +1,7 @@
 <article class="page-wrapper">
 
-    <app-go-to path="/portfolio/video-games" text="Retour à la liste des projets."></app-go-to>
+    <button [routerLink]="['/portfolio/video-games']" routerLinkActive="router-link-active">Retour à la liste des
+        projets</button>
 
     <h1>The Last Judgment</h1>
 
@@ -64,6 +65,8 @@
             </a>
         </div>
     </div>
-    <app-go-to path="/portfolio/video-games" text="Retour à la liste des projets."></app-go-to>
+    
+    <button [routerLink]="['/portfolio/video-games']" routerLinkActive="router-link-active">Retour à la liste des
+        projets</button>
 
 </article>

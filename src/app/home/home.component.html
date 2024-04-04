@@ -3,27 +3,52 @@
         <span class="primary">Ensemble</span>, développons votre projet d'<span class="secondary">application</span> ou votre <span class="tertiary">site web</span>.
     </h1>
 
-    <p>
-        Je m'appelle Augustin Janvier, je suis ingénieur informatique spécialisé dans le développement d'applications web et
-        mobile.
-        Fort de mes 5 années d'étude et de mes 2 ans d'expérience en entreprise , je me suis lancé en Freelance en 2024 afin d'accompagner mes clients
-        dans la réalisation de leurs projets digitaux.
-    </p>
+    <div class="content">
+        <div class="box img-box">
+            <img src="assets/photos/photo-profil.jpeg" alt="">
+        </div>
 
-    <p>
-        Vous souhaitez développer votre activité et avez besoin d'aide pour la réalisation de votre application mobile ou de votre site web ? 
-        Vous avez besoin d'un développeur pour maintenir une application existante, implémenter de nouvelles fonctionnalités ou corriger des bugs ?
-    </p>
+        <div class="box">
+            <p>
+                Je m'appelle Augustin Janvier, je suis ingénieur informatique spécialisé dans le développement d'applications
+                web et mobile.
+            </p>
+            <p>
+                Fort de mes 5 années d'étude et de mes 2 ans d'expérience en entreprise , je me suis lancé en Freelance en 2024
+                afin
+                d'accompagner mes clients
+                dans la réalisation de leurs projets digitaux.
+            </p>
+        
+            <p>
+                Vous souhaitez développer votre activité et avez besoin d'aide pour la réalisation de votre application mobile
+                ou de
+                votre site web ?
+                Vous avez besoin d'un développeur pour maintenir une application existante, implémenter de nouvelles
+                fonctionnalités
+                ou corriger des bugs ?
+            </p>
+        
+            <p>
+                Je développe mes applications avec Angular, un framework javascript puissant et répandu parmi les développeurs.
+                Couplé au framework Ionic, je peux, avec le même code, développer une application web, IOS et Android.
+            </p>
+        </div>
+    </div>
+    
 
-    <p>
-        Je développe mes applications avec Angular, un framework javascript puissant et répandu parmi les développeurs. 
-        Couplé au framework Ionic, je peux, avec le même code, développer une application web, IOS et Android
-    </p>
+    <div class="buttons">
+        <button [routerLink]="['/about']" routerLinkActive="router-link-active" >Explorer mon parcours</button>
 
+        <button [routerLink]="['/portfolio']" routerLinkActive="router-link-active">Découvrir mes projets</button>
+
+        <button [routerLink]="['/contact']" routerLinkActive="router-link-active">Me contacter</button>
+    </div>
+<!-- 
     <app-go-to path="/about" text="Explorer mon parcours."></app-go-to>
 
     <app-go-to path="/portfolio" text="Découvrir mes projets."></app-go-to>
 
-    <app-go-to path="/contact" text="Me contacter."></app-go-to>
+    <app-go-to path="/contact" text="Me contacter."></app-go-to> -->
 
 </div>
