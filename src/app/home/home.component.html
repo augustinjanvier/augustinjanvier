@@ -4,35 +4,41 @@
     </h1>
 
     <div class="content">
-        <div class="box img-box">
-            <img src="assets/photos/photo-profil.jpeg" alt="">
+        <div class="click" [class.open]="open">
+            Clique !
         </div>
 
-        <div class="box">
-            <p>
-                Je m'appelle Augustin Janvier, je suis ingénieur informatique spécialisé dans le développement d'applications
-                web et mobile.
-            </p>
-            <p>
-                Fort de mes 5 années d'étude et de mes 2 ans d'expérience en entreprise , je me suis lancé en Freelance en 2024
-                afin
-                d'accompagner mes clients
-                dans la réalisation de leurs projets digitaux.
-            </p>
-        
-            <p>
-                Vous souhaitez développer votre activité et avez besoin d'aide pour la réalisation de votre application mobile
-                ou de
-                votre site web ?
-                Vous avez besoin d'un développeur pour maintenir une application existante, implémenter de nouvelles
-                fonctionnalités
-                ou corriger des bugs ?
-            </p>
-        
-            <p>
-                Je développe mes applications avec Angular, un framework javascript puissant et répandu parmi les développeurs.
-                Couplé au framework Ionic, je peux, avec le même code, développer une application web, IOS et Android.
-            </p>
+        <div class="box" [class.open]="open" (click)="open = !open">
+
+            <img src="assets/photos/photo-profil.jpeg" alt="" [class.open]="open">
+            
+            <div class="text" [class.open]="open">
+                <p>
+                    Je m'appelle Augustin Janvier, je suis ingénieur informatique spécialisé dans le développement d'applications
+                    web et mobile.
+                </p>
+                <p>
+                    Fort de mes 5 années d'étude et de mes 2 ans d'expérience en entreprise , je me suis lancé en Freelance en 2024
+                    afin
+                    d'accompagner mes clients
+                    dans la réalisation de leurs projets digitaux.
+                </p>
+            
+                <p>
+                    Vous souhaitez développer votre activité et avez besoin d'aide pour la réalisation de votre application mobile
+                    ou de
+                    votre site web ?
+                    Vous avez besoin d'un développeur pour maintenir une application existante, implémenter de nouvelles
+                    fonctionnalités
+                    ou corriger des bugs ?
+                </p>
+            
+                <p>
+                    Je développe mes applications avec Angular, un framework javascript puissant et répandu parmi les développeurs.
+                    Couplé au framework Ionic, je peux, avec le même code, développer une application web, IOS et Android.
+                </p>
+            </div>
+
         </div>
     </div>
     

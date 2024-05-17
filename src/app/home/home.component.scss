@@ -10,11 +10,6 @@ h1 {
     text-align: center;
 }
 
-p {
-    margin: 16px 32px;
-    max-width: 800px;
-}
-
 a {
     display: flex;
     justify-content: space-between;
@@ -38,29 +33,86 @@ a {
 
 .content {
     display: flex;
-    column-gap: 32px;
+    justify-content: center;
+    align-items: center;
     padding: 16px;
+    height: 320px;
+    width: 100%;
+    
     @media screen and (max-width: 700px) {
-        // flex-direction: column;
+        width: 100%;
+        height: auto;
         row-gap: 16px;
-        // align-items: center;
         flex-wrap: wrap;
     }
 }
 
 .box {
-    border: 2px  solid var(--primary);
-    box-shadow: 8px 8px var(--primary);
-    &.img-box {
-        width: 300px;
-        @media screen and (max-width: 700px) {
-            width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    max-width: 800px;
+    height: 300px;
+    transition: 0.2s ease-in-out;
+    border: 5px solid var(--primary);
+    border-radius: 50%;
+    &:hover {
+        transition: 0.2s ease-in-out;
+        width: 320px;
+        height: 320px; 
+        box-shadow: 0 5px 5px rgb(0, 0, 0, 0.15);
+        cursor: pointer;
+    }
+    &.open {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        transition: 0.2s ease-in-out;
+        padding: 16px;
+        &:hover {
+            transition: 0.2s ease-in-out;
+            box-shadow: 0 5px 5px rgb(0, 0, 0, 0.15);
         }
     }
 }
 
+.text {
+    font-size: 0px;
+    transition: 0s;
+    &.open {
+        font-size: 16px;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+
 img {
+    border-radius: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.2s;
+    &.open {
+        width: 0;
+        height: 0;
+        transition: 0s;
+    }
+}
+
+.click {
+    font-family: 'comico';
+    color: var(--secondary);
+    position: absolute;
+    z-index: 5;
+    transform: translateX(150px) translateY(-100px);
+    background-color: white;
+    border: 3px solid var(--secondary);
+    border-radius:  8px 8px 8px 0;
+    padding: 4px;
+    transition: 0.2s ease-in-out;
+    &.open {
+        transform: translateX(150px) translateY(-100px) scale(0);
+    }
 }
