@@ -1,118 +1,203 @@
-.slogan {
-    font-family: 'comico';
-    span {
-        font-weight: bold;
-    }
-}
-
-h1 {
-    max-width: 700px;
-    text-align: center;
-}
-
-a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img {
-        width: 20px;
-    }
-    text-decoration: none;
-    &:hover {
-    filter: brightness(0) saturate(100%) invert(88%) sepia(64%) saturate(3139%) hue-rotate(332deg) brightness(94%) contrast(91%);    }
-}
-
-.buttons {
-    padding-top: 32px;
+app-header {
     width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.page-wrapper {
+    &.page-one {
+        background-image: url(/assets/backgrounds/background.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 700px;
+    }
+    &.page-two {
+        background-color: #d9d69a;
+    }
+    &.page-four {
+        background-color: #d9d69a;
+    }
+}
+
+.slide-one {
+    .slogan {
+            font-family: 'comico';
+    
+            span {
+                font-weight: bold;
+            }
+        }
+    
+        h1 {
+            padding-top: 60pxpx;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .devices {
+            padding: 32px;
+            width: 350px;
+        }
+}
+
+.slide-two {
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
-    align-items: center;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    height: 320px;
     width: 100%;
-    
-    @media screen and (max-width: 700px) {
-        width: 100%;
-        height: auto;
-        row-gap: 16px;
-        flex-wrap: wrap;
+    .bubbles {
+        display: flex;
     }
-}
-
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    max-width: 800px;
-    height: 300px;
-    transition: 0.2s ease-in-out;
-    border: 5px solid var(--primary);
-    border-radius: 50%;
-    &:hover {
-        transition: 0.2s ease-in-out;
+    .line {
+        display: flex;
+        justify-content: space-between;
+    }
+    .photo {
+        margin-left: 32px;
         width: 320px;
-        height: 320px; 
-        box-shadow: 0 5px 5px rgb(0, 0, 0, 0.15);
-        cursor: pointer;
+        border-radius: 50%;
+        border: 28px solid var(--tertiary);
     }
-    &.open {
-        flex-direction: column;
+    .text {
         width: 100%;
-        height: auto;
-        border-radius: 16px;
-        transition: 0.2s ease-in-out;
-        padding: 16px;
-        &:hover {
-            transition: 0.2s ease-in-out;
-            box-shadow: 0 5px 5px rgb(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            max-width: 400px;
+            font-size: 24px;
+        }
+    }
+    .squares-container {
+        padding-top: 64px;
+        display: flex;
+        justify-content: space-between;
+        .square {
+            max-width: 300px;
+            padding: 16px;
+            border-radius: 16px;
+            &.square-one {
+                background-color: var(--primary);
+            }
+            &.square-two {
+                background-color: var(--secondary);
+            }
+            &.square-three {
+                background-color: var(--tertiary);
+            }
+            h4 {
+                text-align: center;
+                font-size: 52px;
+                margin: 0;
+            }
+            p {
+                font-size: 24px;
+                padding: 0 32px;
+                text-align: center;
+            }
         }
     }
 }
 
-.text {
-    font-size: 0px;
-    transition: 0s;
-    &.open {
-        font-size: 16px;
-        transition: 0.2s ease-in-out;
-    }
-}
-
-
-img {
-    border-radius: 50%;
+.slide-three {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.2s;
-    &.open {
-        width: 0;
-        height: 0;
-        transition: 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        width: 100%;
+        padding-top: 0px;
+        max-width: 500px;
+        text-align: center;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 32px;
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            padding: 16px;
+            .logo-container {
+                display: flex;
+                width: 200px;
+                height: 200px;
+                justify-content: center;
+                border-radius: 50%;
+                border: 24px solid var(--tertiary);
+                &.primary {
+                    border-color: var(--primary);
+                }
+                &.secondary {
+                    border-color: var(--secondary);
+                }
+                &.tertiary {
+                    border-color: var(--tertiary);
+                }
+                align-items: center;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            h2 {
+                font-family: 'comico';
+                margin: 0px;
+                font-size: 32px;
+            }
+            h3 {
+                font-family: 'comico';
+                font-weight: 100;
+                margin: 0px;
+            }
+            p {
+                margin: 0px;
+                max-width: 300px;
+            }
+            
+        }
     }
 }
 
-.click {
-    font-family: 'comico';
-    color: var(--secondary);
-    position: absolute;
-    z-index: 5;
-    transform: translateX(150px) translateY(-100px);
-    background-color: white;
-    border: 3px solid var(--secondary);
-    border-radius:  8px 8px 8px 0;
-    padding: 4px;
-    transition: 0.2s ease-in-out;
-    &.open {
-        transform: translateX(150px) translateY(-100px) scale(0);
+.slide-four {
+    h1 {
+        text-align: center;
+    }
+    p {
+        padding: 0 160px;
+    }
+    a {
+
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        .link-line {
+            display: flex;
+            column-gap: 8px;
+    
+            .icon {
+                height: 20px;
+            }
+        }
+    }
+    
+
+}
+
+.page-transition {
+    &.one-two {
+        background-color: #d9d69a;
+    }
+    &.two-three {
+        background-color: var(--background);
+    }
+    &.three-four {
+        background-color: #d9d69a;
     }
 }

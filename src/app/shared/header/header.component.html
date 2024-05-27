@@ -1,11 +1,6 @@
 <header>
-    <nav class="logo" [routerLink]="['home']" routerLinkActive="router-link-active" >
+    <nav class="logo" [routerLink]="['/home']" routerLinkActive="router-link-active" >
         <span>Augustin</span>
         <span>JANVIER</span>
-    </nav>
-    <nav class="nav-item-bar">
-            <a class="nav-item" [routerLink]="['about']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'about'">Qui suis-je ?<div class="underline" [class.selected] = "router.url.split('/')[1] === 'about'"></div></a>
-            <a class="nav-item" [routerLink]="['portfolio']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'portfolio'">Mes projets<div class="underline" [class.selected] = "router.url.split('/')[1] === 'portfolio'"></div></a>
-            <a class="nav-item" [routerLink]="['contact']" routerLinkActive="router-link-active" [class.selected] = "router.url.split('/')[1] === 'contact'">Me contacter<div class="underline" [class.selected] = "router.url.split('/')[1] === 'contact'"></div></a>
     </nav>
 </header>

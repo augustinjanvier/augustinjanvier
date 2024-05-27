@@ -1,60 +1,136 @@
-<div class="page-wrapper">
-    <h1>
-        <span class="primary">Ensemble</span>, développons votre projet d'<span class="secondary">application</span> ou votre <span class="tertiary">site web</span>.
-    </h1>
+<div class="page-wrapper page-one">
+    <app-header></app-header>
 
-    <div class="content">
-        <div class="click" [class.open]="open">
-            Clique !
+    <div class="slide-one">
+        <h1>
+            <span class="primary">Ensemble</span>, développons votre projet d'<span class="secondary">application</span> ou
+            votre <span class="tertiary">site web</span>.
+        </h1>
+
+        <img class="devices" src="/assets/svgs/devices.svg" alt="Devides">
+    </div>
+</div>
+
+<div class="page-transition one-two">
+    <svg viewBox="0 0 500 60">
+        <path d="M 0 5 C 92 9 47 65 153 42 C 233 23 277 21 338 47 C 402 75 408 6 500 5 L 500 0 L 0 0" fill="#FFFDD5"></path>
+    </svg>
+</div>
+
+<div class="page-wrapper page-two">
+
+    <div class="slide-two">
+        <div class="line">
+            <div class="bubbles">
+                <img src="/assets/svgs/two-bubbles.svg" alt="Bubbles">
+                <img class="photo" src="/assets/photos/photo-profil.jpeg" alt="Ma photo">
+            </div>            
+
+            <div class="text">
+                <p>Je suis <b>Augustin JANVIER</b>. Je propose de vous accompagner en tant que développeur web & mobile dans la
+                    réalisation de vos projets.
+                </p>
+            </div>
         </div>
 
-        <div class="box" [class.open]="open" (click)="open = !open">
+        <div class="squares-container">
+            <div class="square square-one">
+                <h4>5</h4>
+                <p>Années d'études d'ingénieur informatique à l'INSA Rennes</p>
+            </div>
+            <div class="square square-two">
+                <h4>2</h4>
+                <p>Ans d'expérience en entreprise en tant qu'ingénieur applicatif</p>
+            </div>
+            <div class="square square-three">
+                <h4>1</h4>
+                <p>Mission freelance terminée avec succès depuis mon lancement</p>
+            </div>
+        </div>
 
-            <img src="assets/photos/photo-profil.jpeg" alt="" [class.open]="open">
-            
-            <div class="text" [class.open]="open">
-                <p>
-                    Je m'appelle Augustin Janvier, je suis ingénieur informatique spécialisé dans le développement d'applications
-                    web et mobile.
-                </p>
-                <p>
-                    Fort de mes 5 années d'étude et de mes 2 ans d'expérience en entreprise , je me suis lancé en Freelance en 2024
-                    afin
-                    d'accompagner mes clients
-                    dans la réalisation de leurs projets digitaux.
-                </p>
-            
-                <p>
-                    Vous souhaitez développer votre activité et avez besoin d'aide pour la réalisation de votre application mobile
-                    ou de
-                    votre site web ?
-                    Vous avez besoin d'un développeur pour maintenir une application existante, implémenter de nouvelles
-                    fonctionnalités
-                    ou corriger des bugs ?
-                </p>
-            
-                <p>
-                    Je développe mes applications avec Angular, un framework javascript puissant et répandu parmi les développeurs.
-                    Couplé au framework Ionic, je peux, avec le même code, développer une application web, IOS et Android.
-                </p>
+    </div>
+</div>
+
+<div class="page-transition two-three">
+    <svg viewBox="0 0 500 60">
+        <path d="M 0 5 C 92 9 47 65 153 42 C 233 23 277 21 338 47 C 402 75 408 6 500 5 L 500 0 L 0 0" fill="#d9d69a">
+        </path>
+    </svg>
+</div>
+
+<div class="page-wrapper page-three">
+
+    <div class="slide-three">
+
+        <h1>Mon expertise</h1>
+
+        <div class="container">
+
+            <div class="card secondary">
+                <div class="logo-container secondary">
+                    <img src="/assets/logos/python.png" alt="Python">
+                </div>
+                <h2>Python</h2>
+                <h3>1 an d'expérience</h3>
+                <p>Je sais développer et maintenir des API en python, notamment avec le framewok Flask, qui permet de concevoir un backend
+                léger.</p>
+            </div>
+
+            <div class="card tertiary">
+                <div class="logo-container tertiary">
+                    <img src="/assets/logos/angular.png" alt="Angular">
+                </div>
+                <h2>Angular</h2>
+                <h3>+ de 2 ans d'expérience</h3>
+                <p>Angular est un puissant framework javascript que j'utilise au quotidien depuis + de 2 ans en milieu professionnel afin
+                de développer des solutions web & mobile.</p>
+            </div>
+
+            <div class="card primary">
+                <div class="logo-container primary">
+                    <img src="/assets/logos/c_sharp.png" alt="C#">
+                </div>
+                <h2>.NET | C#</h2>
+                <h3>2 ans d'expérience</h3>
+                <p>Je suis à l'aise en développement backend avec .NET afin de mettre en place des API robustes.</p>
             </div>
 
         </div>
     </div>
-    
+</div>
 
-    <div class="buttons">
-        <button [routerLink]="['/about']" routerLinkActive="router-link-active" >Explorer mon parcours</button>
+<div class="page-transition one-two">
+    <svg viewBox="0 0 500 60">
+        <path d="M 0 5 C 92 9 47 65 153 42 C 233 23 277 21 338 47 C 402 75 408 6 500 5 L 500 0 L 0 0" fill="#FFFDD5">
+        </path>
+    </svg>
+</div>
 
-        <button [routerLink]="['/portfolio']" routerLinkActive="router-link-active">Découvrir mes projets</button>
+<div class="page-wrapper page-four">
 
-        <button [routerLink]="['/contact']" routerLinkActive="router-link-active">Me contacter</button>
+    <div class="slide-four">
+
+        <h1>Me contacter</h1>
+
+        <p>Mon profil vous intéresse et vous souhaitez me contacter afin de préciser votre projet ? N'hésitez pas à m'envoyer un mail sur mon adresse pro, ou bien directement via la messagerie LinkedIn !</p>
+
+        <div class="links">
+            <div class="link-line">
+                <img class="icon" src="/assets/icons/mail.png" alt="Mail">
+                <a href="mailto:contact@augustin-janvier.fr">contact&#64;augustin-janvier.fr</a>
+            </div>
+            
+            <div class="link-line">
+                <img class="icon" src="/assets/icons/linkedin.webp" alt="LinkedIn">
+                <a href="https://www.linkedin.com/in/augustin-janvier-16407112a/" target="_blank">Ma page LinkedIn</a>
+            </div>
+        </div>
     </div>
-<!-- 
-    <app-go-to path="/about" text="Explorer mon parcours."></app-go-to>
+</div>
 
-    <app-go-to path="/portfolio" text="Découvrir mes projets."></app-go-to>
-
-    <app-go-to path="/contact" text="Me contacter."></app-go-to> -->
-
+<div class="page-transition two-three">
+    <svg viewBox="0 0 500 60">
+        <path d="M 0 5 C 92 9 47 65 153 42 C 233 23 277 21 338 47 C 402 75 408 6 500 5 L 500 0 L 0 0" fill="#d9d69a">
+        </path>
+    </svg>
 </div>
