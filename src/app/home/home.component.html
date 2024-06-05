@@ -1,136 +1,88 @@
-<div class="page-wrapper page-one">
-    <app-header></app-header>
-
-    <div class="slide-one">
+<div class="home">
+    <div class="header">
+        <img class="logo primary-filter" src="/assets/logos/Logo.svg" alt="Logo">
+        <button (click)="ScrollToSection('contact')">Me contacter</button>
+    </div>
+    <div class="content">
         <h1>
-            <span class="primary">Ensemble</span>, développons votre projet d'<span class="secondary">application</span> ou
-            votre <span class="tertiary">site web</span>.
+            <span class="insist">Ensemble</span>, développons votre projet d'<span class="insist">application</span> ou votre <span class="insist">site web</span>.
         </h1>
-
-        <img class="devices" src="/assets/svgs/devices.svg" alt="Devides">
+        <img src="/assets/images/graphisme-laptop.png" alt="Dessin de laptop">
     </div>
 </div>
 
-<div class="page-transition one-two">
-    <svg viewBox="0 0 500 60">
-        <path d="M 0 5 C 92 9 47 65 153 42 C 233 23 277 21 338 47 C 402 75 408 6 500 5 L 500 0 L 0 0" fill="#FFFDD5"></path>
-    </svg>
+<div class="transition-arrow" (click)="ScrollToSection('me')" title="Continuer la navigation">
+    <img src="/assets/icons/arrow-down.svg" alt="Arrow" class="secondary-filter">
 </div>
 
-<div class="page-wrapper page-two">
-
-    <div class="slide-two">
-        <div class="line">
-            <div class="bubbles">
-                <img src="/assets/svgs/two-bubbles.svg" alt="Bubbles">
-                <img class="photo" src="/assets/photos/photo-profil.jpeg" alt="Ma photo">
-            </div>            
-
-            <div class="text">
-                <p>Je suis <b>Augustin JANVIER</b>. Je propose de vous accompagner en tant que développeur web & mobile dans la
-                    réalisation de vos projets.
-                </p>
+<div class="me" id="me">
+    <img src="/assets/photos/moi.png" alt="Moi">
+    <div class="right-panel">
+        <h3>
+            Je suis un ingénieur logiciel spécialisé dans le développement web & mobile.
+        </h3>
+        <div class="time-container">
+            <div class="time-line">
+                <div class="date">2016 - 2021</div>
+                <div class="text">Etudes d'ingénieur informatique à l'INSA Rennes - BAC + 5</div>
             </div>
-        </div>
-
-        <div class="squares-container">
-            <div class="square square-one">
-                <h4>5</h4>
-                <p>Années d'études d'ingénieur informatique à l'INSA Rennes</p>
+            <img src="/assets/icons/arrow-down.svg" alt="Arrow" class="primary-filter">
+            <div class="time-line">
+                <div class="date">2022 - 2024</div>
+                <div class="text">2 ans d'expérience en tant qu'ingénieur logiciel chez Scania à Angers.</div>
             </div>
-            <div class="square square-two">
-                <h4>2</h4>
-                <p>Ans d'expérience en entreprise en tant qu'ingénieur applicatif</p>
+            <img src="/assets/icons/arrow-down.svg" alt="Arrow" class="primary-filter">
+            <div class="time-line">
+                <div class="date">Aujourd'hui</div>
+                <div class="text">Développeur web & mobile en Freelance.</div>
             </div>
-            <div class="square square-three">
-                <h4>1</h4>
-                <p>Mission freelance terminée avec succès depuis mon lancement</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="page-transition two-three">
-    <svg viewBox="0 0 500 60">
-        <path d="M 0 5 C 92 9 47 65 153 42 C 233 23 277 21 338 47 C 402 75 408 6 500 5 L 500 0 L 0 0" fill="#d9d69a">
-        </path>
-    </svg>
-</div>
-
-<div class="page-wrapper page-three">
-
-    <div class="slide-three">
-
-        <h1>Mon expertise</h1>
-
-        <div class="container">
-
-            <div class="card secondary">
-                <div class="logo-container secondary">
-                    <img src="/assets/logos/python.png" alt="Python">
-                </div>
-                <h2>Python</h2>
-                <h3>1 an d'expérience</h3>
-                <p>Je sais développer et maintenir des API en python, notamment avec le framewok Flask, qui permet de concevoir un backend
-                léger.</p>
-            </div>
-
-            <div class="card tertiary">
-                <div class="logo-container tertiary">
-                    <img src="/assets/logos/angular.png" alt="Angular">
-                </div>
-                <h2>Angular</h2>
-                <h3>+ de 2 ans d'expérience</h3>
-                <p>Angular est un puissant framework javascript que j'utilise au quotidien depuis + de 2 ans en milieu professionnel afin
-                de développer des solutions web & mobile.</p>
-            </div>
-
-            <div class="card primary">
-                <div class="logo-container primary">
-                    <img src="/assets/logos/c_sharp.png" alt="C#">
-                </div>
-                <h2>.NET | C#</h2>
-                <h3>2 ans d'expérience</h3>
-                <p>Je suis à l'aise en développement backend avec .NET afin de mettre en place des API robustes.</p>
-            </div>
-
+            <img src="/assets/icons/arrow-down.svg" alt="Arrow" class="primary-filter">
+            <button [routerLink]="['/about']" routerLinkActive="router-link-active">En savoir +</button>
         </div>
     </div>
 </div>
 
-<div class="page-transition one-two">
-    <svg viewBox="0 0 500 60">
-        <path d="M 0 5 C 92 9 47 65 153 42 C 233 23 277 21 338 47 C 402 75 408 6 500 5 L 500 0 L 0 0" fill="#FFFDD5">
-        </path>
-    </svg>
-</div>
+<div class="projects">
+    <h2>Décrouvrez mes expériences</h2>
+    <div class="cards-container">
 
-<div class="page-wrapper page-four">
+        <div class="card">
+            <img src="/assets/screenshots/duck-business-screenshot.jpeg" alt="Screnshot">
+            <h3>Titre</h3>
+            <p>Lorem ipsum Lorem ipsumLorem</p>
+        </div>
 
-    <div class="slide-four">
+        <div class="card">
+            <img src="/assets/screenshots/duck-business-screenshot.jpeg" alt="Screnshot">
+            <h3>Titre</h3>
+            <p>Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+        </div>
+        
+        <div class="card">
+            <img src="/assets/screenshots/duck-business-screenshot.jpeg" alt="Screnshot">
+            <h3>Titre</h3>
+            <p>Lorem ipsum Lorem ipsumLorem</p>
+        </div>
 
-        <h1>Me contacter</h1>
-
-        <p>Mon profil vous intéresse et vous souhaitez me contacter afin de préciser votre projet ? N'hésitez pas à m'envoyer un mail sur mon adresse pro, ou bien directement via la messagerie LinkedIn !</p>
-
-        <div class="links">
-            <div class="link-line">
-                <img class="icon" src="/assets/icons/mail.png" alt="Mail">
-                <a href="mailto:contact@augustin-janvier.fr">contact&#64;augustin-janvier.fr</a>
-            </div>
-            
-            <div class="link-line">
-                <img class="icon" src="/assets/icons/linkedin.webp" alt="LinkedIn">
-                <a href="https://www.linkedin.com/in/augustin-janvier-16407112a/" target="_blank">Ma page LinkedIn</a>
-            </div>
+        <div class="card">
+            <img src="/assets/screenshots/duck-business-screenshot.jpeg" alt="Screnshot">
+            <h3>Titre</h3>
+            <p>Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
         </div>
     </div>
 </div>
 
-<div class="page-transition two-three">
-    <svg viewBox="0 0 500 60">
-        <path d="M 0 5 C 92 9 47 65 153 42 C 233 23 277 21 338 47 C 402 75 408 6 500 5 L 500 0 L 0 0" fill="#d9d69a">
-        </path>
-    </svg>
+<div class="contact" id="contact">
+    <h2>Me contacter</h2>
+    <div class="links-container">
+        <a class="link-card" href="https://www.linkedin.com/in/augustin-janvier-16407112a/" target="_blank">
+            <img src="/assets/icons/linkedin.webp" alt="LinkedIn">
+            <p>Augustin Janvier</p>
+        </a>
+
+        <a class="link-card" href="mailto:contact@augustin-janvier.fr">
+            <img src="/assets/icons/mail.png" class="primary-filter" alt="Mail">
+            <p>contact&#64;augustin-janvier.fr</p>
+        </a>
+    </div>
 </div>

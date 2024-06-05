@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  open: boolean = false;
-
   constructor() {
+  }
+
+  ScrollToSection(section: string) {
+    console.log(section);
+    document.getElementById(section)?.scrollIntoView();
   }
   
 }

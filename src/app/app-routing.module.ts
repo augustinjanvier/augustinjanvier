@@ -13,16 +13,6 @@ const routes: Routes = [
     title: 'Augustin Janvier - À propos'
   },
   {
-    path: 'portfolio',
-    loadChildren: () => import('./portfolio/portfolio.module').then( m => m.PortfolioModule),
-    title: 'Augustin Janvier - Mes projets'
-  },
-  {
-    path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactModule),
-    title: 'Augustin Janvier - Contact'
-  },
-  {
     path: '**',
     redirectTo: 'home'
   },
@@ -32,7 +22,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules,
-      scrollPositionRestoration: 'enabled'
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled'
     })
   ],
   exports: [RouterModule]
