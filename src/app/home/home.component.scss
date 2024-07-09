@@ -164,8 +164,8 @@
         .modal {
             z-index: 10;
             transition: 0.3s;
-            background-color: var(--tertiary);
-            color: var(--primary);
+            background-color: var(--primary);
+            color: white;
             position: fixed;
             right: 20px;
             left: 20px;
@@ -272,15 +272,36 @@
 
 .modal-content {
     img {
-        max-height: 70vh;
-        max-width: 90vw;
-        @media only screen and (max-width: 600px) {
-            max-height: 20vh;
+        &.scania {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            align-self: center;
+            padding: 0 64px;
+            @media only screen and (max-width: 600px) {
+                padding: 0;
+            }
+        }
+        &.dinorpg {
+            width: 50%;
+            height: auto;
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &.mytwido {
+            max-height: 70vh;
             max-width: 90vw;
+            @media only screen and (max-width: 600px) {
+                max-height: 20vh;
+                max-width: 90vw;
+            }
         }
     }
     .container {
         display: flex;
+        align-items: flex-start;
         @media only screen and (max-width: 600px) {
             flex-direction: column;
         }
@@ -294,6 +315,19 @@
                 }
             }
         }
+        .link-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom:  16px;
+            a {
+                padding: 4px 8px;
+                border-radius: 16px;
+                background-color: white;
+                color: var(--primary);
+        
+            }
+        }
+        
     }
     p {
         font-style: normal;
@@ -304,8 +338,20 @@
 
 .scrollable {
     overflow: auto;
-    max-height: 80vh;
-    @media only screen and (max-width: 600px) {
-        max-height: 95vh;
+    height: 100%;
+    // max-height: 100%;
+    // @media only screen and (max-width: 600px) {
+    //     max-height: 95vh;
+    // }
+}
+
+.cross {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    img {
+        filter: brightness(100);
+        width: 30px;
+        height: 30px;
     }
 }

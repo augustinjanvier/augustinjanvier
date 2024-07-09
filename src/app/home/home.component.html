@@ -63,10 +63,13 @@
                 <p>Application web de gestion des contrats et factures de commandes de camions pour Scania France</p>
             </ng-container>
             <ng-container *ngIf="showCMR">
+                <div class="cross">
+                    <img src="/assets/icons/close.svg" alt="Close">
+                </div>
                 <div class="modal-content scrollable">
                     <h2>CMR+</h2>
                     <div class="container">
-                        <img src="/assets/miniatures/scania.jpeg" alt="Fiche Dino-RPG" style="height: 200px; width: 200px;">
+                        <img class="scania" src="/assets/miniatures/scania.jpeg" alt="Fiche Dino-RPG">
                         <div>
                             <h3>Mon poste de développeur chez Scania IT</h3>
                             <p>J'ai travaillé durant 1 an et demi au sein de Scania IT à Angers afin de travailler sur leurs logiciels
@@ -99,6 +102,9 @@
                 <p>Application mobile de gestion d'un chauffe-eau connecté</p>
             </ng-container>
             <ng-container *ngIf="showMyTwido">
+                <div class="cross">
+                    <img src="/assets/icons/close.svg" alt="Close">
+                </div>
                 <div class="modal-content scrollable">
                     <h2>MyTwido</h2>
                     <div class="container">
@@ -141,10 +147,13 @@
                 <p>Jeu en ligne open source développé par une communauté de développeurs passionnés</p>
             </ng-container>
             <ng-container *ngIf="showDinoRPG">
+                <div class="cross">
+                    <img src="/assets/icons/close.svg" alt="Close">
+                </div>
                 <div class="modal-content scrollable">
                     <h2>Eternal Dinor-RPG</h2>
                     <div class="container">
-                        <img src="/assets/screenshots/fiche_dinorpg_blank.png" alt="Fiche Dino-RPG">
+                        <img class="dinorpg" src="/assets/screenshots/fiche_dinorpg_blank.png" alt="Fiche Dino-RPG">
                         <div>
                             <h3>Le projet</h3>
                             <p>Dino-RPG est un jeu en ligne sur navigateur développé par Motion Twin, qui a fermé ses portes définitivement en 2023.
@@ -175,7 +184,9 @@
                                 <li><strong>Base de données :</strong> Postgresql</li>
                                 <li><strong>Gestion de projet :</strong> Git, Discord</li>
                             </ul>
-                            <a href="https://dinorpg.eternaltwin.org/" target="_blank" (click)="stopPropagation($event)">Accéder au jeu</a>
+                            <div class="link-container">
+                                <a href="https://dinorpg.eternaltwin.org/" target="_blank" (click)="stopPropagation($event)">Accéder au jeu</a>
+                            </div>
                         </div>
                     </div>
                 </div>
