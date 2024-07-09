@@ -56,24 +56,131 @@
     <p>Cliquez sur une carte pour l'agrandir !</p>
     <div class="cards-container">
 
-        <div class="card">
-            <img src="/assets/miniatures/scania.jpeg" alt="CMR+">
-            <h3>CMR+</h3>
-            <p>Application web de gestion des contrats et factures de commandes de camions pour Scania France</p>
+        <div class="card" [ngClass]="{modal: showCMR, widget: !showCMR}" (click)="showCMR = !showCMR">
+            <ng-container *ngIf="!showCMR">
+                <img src="/assets/miniatures/scania.jpeg" alt="CMR+">
+                <h3>CMR+</h3>
+                <p>Application web de gestion des contrats et factures de commandes de camions pour Scania France</p>
+            </ng-container>
+            <ng-container *ngIf="showCMR">
+                <div class="modal-content scrollable">
+                    <h2>CMR+</h2>
+                    <div class="container">
+                        <img src="/assets/miniatures/scania.jpeg" alt="Fiche Dino-RPG" style="height: 200px; width: 200px;">
+                        <div>
+                            <h3>Mon poste de développeur chez Scania IT</h3>
+                            <p>J'ai travaillé durant 1 an et demi au sein de Scania IT à Angers afin de travailler sur leurs logiciels
+                                touchant à la partie commerciale de Scania France.
+                            </p>
+
+                            <p>
+                                Durant cette période, je développe principalement sur CMR+, une application web interne de gestion des contrats
+                                et factures des commandes de camions. Avec une équipe de développeurs et entourés de chefs de projets, administrateurs
+                                système et des utilisateurs de l'application, nous corrigeons et améliorons constamment CMR+.
+                            </p>
+                
+                            <h3>Stack technique</h3>
+                            <ul>
+                                <li><strong>Frontend :</strong> Angular</li>
+                                <li><strong>Backend :</strong> .NET (C#) et Flask (Python)</li>
+                                <li><strong>Bases de données :</strong> SQLserver et Postgresql</li>
+                                <li><strong>Gestion de projet :</strong> Gitlab, JIRA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
         </div>
 
-        <div class="card">
-            <img src="/assets/miniatures/twido_minia.jpeg" alt="MyTwido">
-            <h3>MyTwido</h3>
-            <p>Application mobile de gestion d'un chauffe-eau connecté</p>
+        <div class="card" [ngClass]="{modal: showMyTwido, widget: !showMyTwido}" (click)="showMyTwido = !showMyTwido">
+            <ng-container *ngIf="!showMyTwido">
+                <img src="/assets/miniatures/twido_minia.jpeg" alt="MyTwido">
+                <h3>MyTwido</h3>
+                <p>Application mobile de gestion d'un chauffe-eau connecté</p>
+            </ng-container>
+            <ng-container *ngIf="showMyTwido">
+                <div class="modal-content scrollable">
+                    <h2>MyTwido</h2>
+                    <div class="container">
+                        <div class="img-twido">
+                            <img src="/assets/screenshots/twido_home.png" alt="Fiche Dino-RPG">
+                            <img src="/assets/screenshots/twido_analyses.png" alt="Fiche Dino-RPG">
+                        </div>
+                        <div>
+                            <h3>Ma première mission Freelance</h3>
+                            <p>Durant 2 mois, je développe de A à Z une application mobile de gestion d'un chauffe-eau connecté pour un client du grand ouest.
+                            </p>
+                            <p>Nous fonctionnons par sprints d'une semaine, avec des réunions hebdomadaires, afin de permettre un suivi efficace de l'avancée des développements.</p>
+                            <ul>
+                                <li>Chiffrage et estimation de la charge de travail</li>
+                                <li>Mise en place de l'architecture du projet</li>
+                                <li>Implémentation du service d'authentification</li>
+                                <li>Implémentation de l'API de gestion du chauffe-eau</li>
+                                <li>Création des différentes pages de l'application</li>
+                                <li>Design responsive et fluide</li>
+                                <li>Slider circulaire sur mesure</li>
+                                <li>Graphes d'analyse des données de chauffe</li>
+                                <li>Etc...</li>
+                            </ul>
+                
+                            <h3>Stack technique</h3>
+                            <ul>
+                                <li><strong>Frontend :</strong> Angular + Ionic Framework</li>
+                                <li><strong>Gestion de projet :</strong> Git, Trello, Slack</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
         </div>
 
-        <div class="card">
-            <img src="/assets/miniatures/dinorpg.jpg" alt="Screnshot">
-            <h3>Eternal Dino-RPG</h3>
-            <p>Jeu en ligne open source développé par une communauté de développeurs passionnés</p>
-        </div>
+        <div class="card" [ngClass]="{modal: showDinoRPG, widget: !showDinoRPG}" (click)="showDinoRPG = !showDinoRPG">
+            <ng-container *ngIf="!showDinoRPG">
+                <img src="/assets/miniatures/dinorpg.jpg" alt="Screnshot">
+                <h3>Eternal Dino-RPG</h3>
+                <p>Jeu en ligne open source développé par une communauté de développeurs passionnés</p>
+            </ng-container>
+            <ng-container *ngIf="showDinoRPG">
+                <div class="modal-content scrollable">
+                    <h2>Eternal Dinor-RPG</h2>
+                    <div class="container">
+                        <img src="/assets/screenshots/fiche_dinorpg_blank.png" alt="Fiche Dino-RPG">
+                        <div>
+                            <h3>Le projet</h3>
+                            <p>Dino-RPG est un jeu en ligne sur navigateur développé par Motion Twin, qui a fermé ses portes définitivement en 2023.
+                            Les joueurs, avec l'accord de l'entreprise, ont décidé de reprendre le projet sous forme open-source : Eternal Dino-RPG.</p>
+                            
+                            <p>J'ai participé en tant que développeur web afin d'aider la communauté à redévelopper ce jeu qui a bercé mon enfance.
+                            J'ai réalisé toute la partie des clans, une feature qui permet entre autres aux joueurs de se regrouper, participer à
+                            des guerres, et échanger sur un forum.</p>
 
+                            <p>J'ai passé plus de 2 mois à travailler bénévolement sur mon temps libre afin de réaliser toute la partie frontend + backend
+                                de cette feature.</p>
+
+                            <p>Voici une liste non exaustive de ce que j'ai implémenté :</p>
+                            <ul>
+                                <li>Créer, modifier et supprimer un clan</li>
+                                <li>Gestion des droits des différents membres</li>
+                                <li>Accepter ou refuser les demandes d'adhésion</li>
+                                <li>Créer, modifier et supprimer des pages internes</li>
+                                <li>Poster des messages sur le fil de discussion</li>
+                                <li>Génération automatique d'un historique des événements internes</li>
+                                <li>etc...</li>
+                            </ul>
+
+                            <h3>Stack technique</h3>
+                            <ul>
+                                <li><strong>Frontend :</strong> Vue.js</li>
+                                <li><strong>Backend :</strong> Node.js, Prisma ORM</li>
+                                <li><strong>Base de données :</strong> Postgresql</li>
+                                <li><strong>Gestion de projet :</strong> Git, Discord</li>
+                            </ul>
+                            <a href="https://dinorpg.eternaltwin.org/" target="_blank">Accéder au jeu</a>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </div>
 

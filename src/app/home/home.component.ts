@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  showCMR: boolean = false;
+  showMyTwido: boolean = false;
+  showDinoRPG: boolean = false;
+
   constructor() {
   }
 
