@@ -18,5 +18,8 @@ export class HomeComponent {
     console.log(section);
     document.getElementById(section)?.scrollIntoView();
   }
-  
+
+  stopPropagation(event: Event) {
+    event.stopPropagation();
+  }
 }
