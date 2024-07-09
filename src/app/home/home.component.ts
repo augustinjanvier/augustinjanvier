@@ -7,7 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  showCMR: boolean = false;
+  showMyTwido: boolean = false;
+  showDinoRPG: boolean = false;
+
   constructor() {
+  }
+
+  ScrollToSection(section: string) {
+    console.log(section);
+    document.getElementById(section)?.scrollIntoView();
   }
   
 }

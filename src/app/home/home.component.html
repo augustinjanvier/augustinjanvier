@@ -1,54 +1,205 @@
-<div class="page-wrapper">
-    <h1>
-        <span class="primary">Ensemble</span>, développons votre projet d'<span class="secondary">application</span> ou votre <span class="tertiary">site web</span>.
-    </h1>
+<div class="calendly">
+    <a href="https://calendly.com/aug-j22/30min" target="_blank">
+        <div class="widget">
+            <img src="/assets/icons/calendar.svg" alt="Phone">
+            <div class="text">Réserver un créneau</div>
+        </div>
+    </a>
+</div>
 
+<div class="home">
+    <div class="header">
+        <img class="logo primary-filter" src="/assets/logos/Logo.svg" alt="Logo">
+        <button (click)="ScrollToSection('contact')">Me contacter</button>
+    </div>
     <div class="content">
-        <div class="box img-box">
-            <img src="assets/photos/photo-profil.jpeg" alt="">
-        </div>
+        <h1>
+            <span class="insist">Ensemble</span>, développons votre projet d'<span class="insist">application</span> ou votre <span class="insist">site web</span>.
+        </h1>
+        <img src="/assets/images/graphisme-laptop.png" alt="Dessin de laptop">
+    </div>
+</div>
 
-        <div class="box">
-            <p>
-                Je m'appelle Augustin Janvier, je suis ingénieur informatique spécialisé dans le développement d'applications
-                web et mobile.
-            </p>
-            <p>
-                Fort de mes 5 années d'étude et de mes 2 ans d'expérience en entreprise , je me suis lancé en Freelance en 2024
-                afin
-                d'accompagner mes clients
-                dans la réalisation de leurs projets digitaux.
-            </p>
-        
-            <p>
-                Vous souhaitez développer votre activité et avez besoin d'aide pour la réalisation de votre application mobile
-                ou de
-                votre site web ?
-                Vous avez besoin d'un développeur pour maintenir une application existante, implémenter de nouvelles
-                fonctionnalités
-                ou corriger des bugs ?
-            </p>
-        
-            <p>
-                Je développe mes applications avec Angular, un framework javascript puissant et répandu parmi les développeurs.
-                Couplé au framework Ionic, je peux, avec le même code, développer une application web, IOS et Android.
-            </p>
+<div class="transition-arrow" (click)="ScrollToSection('me')" title="Continuer la navigation">
+    <img src="/assets/icons/arrow-down.svg" alt="Arrow" class="secondary-filter">
+</div>
+
+<div class="me" id="me">
+    <img src="/assets/photos/moi.png" alt="Moi">
+    <div class="right-panel">
+        <h3>
+            Je suis Augustin Janvier, un ingénieur logiciel spécialisé dans le développement d'applications web & mobile.
+        </h3>
+        <div class="time-container">
+            <div class="time-line">
+                <div class="date">2016 - 2021</div>
+                <div class="text">Etudes d'ingénieur informatique à l'INSA Rennes - BAC + 5</div>
+            </div>
+            <img src="/assets/icons/arrow-down.svg" alt="Arrow" class="primary-filter">
+            <div class="time-line">
+                <div class="date">2022 - 2024</div>
+                <div class="text">2 ans d'expérience en tant qu'ingénieur logiciel chez Scania à Angers.</div>
+            </div>
+            <img src="/assets/icons/arrow-down.svg" alt="Arrow" class="primary-filter">
+            <div class="time-line">
+                <div class="date">Aujourd'hui</div>
+                <div class="text">Développeur web & mobile en Freelance.</div>
+            </div>
+            <img src="/assets/icons/arrow-down.svg" alt="Arrow" class="primary-filter">
+            <button [routerLink]="['/about']" routerLinkActive="router-link-active">En savoir +</button>
         </div>
     </div>
-    
+</div>
 
-    <div class="buttons">
-        <button [routerLink]="['/about']" routerLinkActive="router-link-active" >Explorer mon parcours</button>
+<div class="projects">
+    <h2>Décrouvrez mes précédents projets</h2>
+    <p>Cliquez sur une carte pour l'agrandir !</p>
+    <div class="cards-container">
 
-        <button [routerLink]="['/portfolio']" routerLinkActive="router-link-active">Découvrir mes projets</button>
+        <div class="card" [ngClass]="{modal: showCMR, widget: !showCMR}" (click)="showCMR = !showCMR">
+            <ng-container *ngIf="!showCMR">
+                <img src="/assets/miniatures/scania.jpeg" alt="CMR+">
+                <h3>CMR+</h3>
+                <p>Application web de gestion des contrats et factures de commandes de camions pour Scania France</p>
+            </ng-container>
+            <ng-container *ngIf="showCMR">
+                <div class="modal-content scrollable">
+                    <h2>CMR+</h2>
+                    <div class="container">
+                        <img src="/assets/miniatures/scania.jpeg" alt="Fiche Dino-RPG" style="height: 200px; width: 200px;">
+                        <div>
+                            <h3>Mon poste de développeur chez Scania IT</h3>
+                            <p>J'ai travaillé durant 1 an et demi au sein de Scania IT à Angers afin de travailler sur leurs logiciels
+                                touchant à la partie commerciale de Scania France.
+                            </p>
 
-        <button [routerLink]="['/contact']" routerLinkActive="router-link-active">Me contacter</button>
+                            <p>
+                                Durant cette période, je développe principalement sur CMR+, une application web interne de gestion des contrats
+                                et factures des commandes de camions. Avec une équipe de développeurs et entourés de chefs de projets, administrateurs
+                                système et des utilisateurs de l'application, nous corrigeons et améliorons constamment CMR+.
+                            </p>
+                
+                            <h3>Stack technique</h3>
+                            <ul>
+                                <li><strong>Frontend :</strong> Angular</li>
+                                <li><strong>Backend :</strong> .NET (C#) et Flask (Python)</li>
+                                <li><strong>Bases de données :</strong> SQLserver et Postgresql</li>
+                                <li><strong>Gestion de projet :</strong> Gitlab, JIRA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="card" [ngClass]="{modal: showMyTwido, widget: !showMyTwido}" (click)="showMyTwido = !showMyTwido">
+            <ng-container *ngIf="!showMyTwido">
+                <img src="/assets/miniatures/twido_minia.jpeg" alt="MyTwido">
+                <h3>MyTwido</h3>
+                <p>Application mobile de gestion d'un chauffe-eau connecté</p>
+            </ng-container>
+            <ng-container *ngIf="showMyTwido">
+                <div class="modal-content scrollable">
+                    <h2>MyTwido</h2>
+                    <div class="container">
+                        <div class="img-twido">
+                            <img src="/assets/screenshots/twido_home.png" alt="Fiche Dino-RPG">
+                            <img src="/assets/screenshots/twido_analyses.png" alt="Fiche Dino-RPG">
+                        </div>
+                        <div>
+                            <h3>Ma première mission Freelance</h3>
+                            <p>Durant 2 mois, je développe de A à Z une application mobile de gestion d'un chauffe-eau connecté pour un client du grand ouest.
+                            </p>
+                            <p>Nous fonctionnons par sprints d'une semaine, avec des réunions hebdomadaires, afin de permettre un suivi efficace de l'avancée des développements.</p>
+                            <ul>
+                                <li>Chiffrage et estimation de la charge de travail</li>
+                                <li>Mise en place de l'architecture du projet</li>
+                                <li>Implémentation du service d'authentification</li>
+                                <li>Implémentation de l'API de gestion du chauffe-eau</li>
+                                <li>Création des différentes pages de l'application</li>
+                                <li>Design responsive et fluide</li>
+                                <li>Slider circulaire sur mesure</li>
+                                <li>Graphes d'analyse des données de chauffe</li>
+                                <li>Etc...</li>
+                            </ul>
+                
+                            <h3>Stack technique</h3>
+                            <ul>
+                                <li><strong>Frontend :</strong> Angular + Ionic Framework</li>
+                                <li><strong>Gestion de projet :</strong> Git, Trello, Slack</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="card" [ngClass]="{modal: showDinoRPG, widget: !showDinoRPG}" (click)="showDinoRPG = !showDinoRPG">
+            <ng-container *ngIf="!showDinoRPG">
+                <img src="/assets/miniatures/dinorpg.jpg" alt="Screnshot">
+                <h3>Eternal Dino-RPG</h3>
+                <p>Jeu en ligne open source développé par une communauté de développeurs passionnés</p>
+            </ng-container>
+            <ng-container *ngIf="showDinoRPG">
+                <div class="modal-content scrollable">
+                    <h2>Eternal Dinor-RPG</h2>
+                    <div class="container">
+                        <img src="/assets/screenshots/fiche_dinorpg_blank.png" alt="Fiche Dino-RPG">
+                        <div>
+                            <h3>Le projet</h3>
+                            <p>Dino-RPG est un jeu en ligne sur navigateur développé par Motion Twin, qui a fermé ses portes définitivement en 2023.
+                            Les joueurs, avec l'accord de l'entreprise, ont décidé de reprendre le projet sous forme open-source : Eternal Dino-RPG.</p>
+                            
+                            <p>J'ai participé en tant que développeur web afin d'aider la communauté à redévelopper ce jeu qui a bercé mon enfance.
+                            J'ai réalisé toute la partie des clans, une feature qui permet entre autres aux joueurs de se regrouper, participer à
+                            des guerres, et échanger sur un forum.</p>
+
+                            <p>J'ai passé plus de 2 mois à travailler bénévolement sur mon temps libre afin de réaliser toute la partie frontend + backend
+                                de cette feature.</p>
+
+                            <p>Voici une liste non exaustive de ce que j'ai implémenté :</p>
+                            <ul>
+                                <li>Créer, modifier et supprimer un clan</li>
+                                <li>Gestion des droits des différents membres</li>
+                                <li>Accepter ou refuser les demandes d'adhésion</li>
+                                <li>Créer, modifier et supprimer des pages internes</li>
+                                <li>Poster des messages sur le fil de discussion</li>
+                                <li>Génération automatique d'un historique des événements internes</li>
+                                <li>etc...</li>
+                            </ul>
+
+                            <h3>Stack technique</h3>
+                            <ul>
+                                <li><strong>Frontend :</strong> Vue.js</li>
+                                <li><strong>Backend :</strong> Node.js, Prisma ORM</li>
+                                <li><strong>Base de données :</strong> Postgresql</li>
+                                <li><strong>Gestion de projet :</strong> Git, Discord</li>
+                            </ul>
+                            <a href="https://dinorpg.eternaltwin.org/" target="_blank">Accéder au jeu</a>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
     </div>
-<!-- 
-    <app-go-to path="/about" text="Explorer mon parcours."></app-go-to>
+</div>
 
-    <app-go-to path="/portfolio" text="Découvrir mes projets."></app-go-to>
+<div class="contact" id="contact">
+    <h2>Me contacter</h2>
+    <div class="links-container">
+        <a class="link-card" href="https://www.linkedin.com/in/augustin-janvier-16407112a/" target="_blank">
+            <img src="/assets/icons/linkedin.webp" alt="LinkedIn">
+            <p>Augustin Janvier</p>
+        </a>
 
-    <app-go-to path="/contact" text="Me contacter."></app-go-to> -->
+        <a class="link-card" href="mailto:contact@augustin-janvier.fr">
+            <img src="/assets/icons/mail.png" class="primary-filter" alt="Mail">
+            <p>contact&#64;augustin-janvier.fr</p>
+        </a>
 
+        <a class="link-card" href="https://calendly.com/aug-j22/30min">
+            <img src="/assets/icons/calendar.svg" class="primary-filter" alt="Phone">
+            <p>Réserver un créneau de 30 minutes</p>
+        </a>
+    </div>
 </div>
